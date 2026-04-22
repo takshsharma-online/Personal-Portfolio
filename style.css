@@ -181,3 +181,36 @@ footer {
  h2{
     text-align: center;
 }
+/*Following are the customizations for projects.html*/
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project-header {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+
+.project-icon {
+    font-size: 2rem;
+    color: var(--primary-blue);
+}
+.tech-tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--secondary-text);
+    display: block;
+    margin: 5px 0;
+}
