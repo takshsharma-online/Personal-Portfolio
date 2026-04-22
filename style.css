@@ -1,0 +1,92 @@
+/*Following are the defaults for light mode*/
+:root{
+    --bg-color: #f9f9f9;
+    --text-color: #222;
+    --hero-bg: #f3f7ff;
+    --card-bg: #ffffff;
+    --border-color: #ddd;
+    --primary-blue: #007BFF;
+    --secondary-text: #555;
+}
+/*Following are defaults for dark mode*/
+.dark{
+    --bg-color: #1a1a1a;
+    --text-color: #f5f5f5;
+    --hero-bg: #252525;
+    --card-bg: #2a2a2a;
+    --border-color: #333;
+    --primary-blue: #4da3ff;
+    --secondary-text: #ccc;
+}
+/*Following remove any default margin or padding*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Following are defaults for the body*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding-top: 80px; /* Space for fixed navbar */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/*Following are the settings for the container in which the navbar exists*/
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/*Following is some customization for the navbar.*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    padding: 15px 0;
+}
+/*Following are  customisations for the text within the navbar.*/
+.navbar a{
+    color: black;
+    text-decoration: none;
+}
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+.nav-links h2 a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+/*Following make sure that the links in the navbar change color on hover.*/
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+/*Following are some presets for theme toggle.*/
+#themeToggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--text-color);
+}
