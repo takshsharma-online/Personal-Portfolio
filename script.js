@@ -57,3 +57,65 @@ if (canvas) {
     animate();
 }
 
+
+
+
+
+
+const myProjects = [
+    {
+        title: "Vesper's Ledger",
+        tech: "[Java | JavaFX | MySQL | System Design]",
+        desc: "Full-stack event and task management system with CRUD operations and structured data handling.",
+        link: "https://github.com/takshsharma-online",
+        icon: "fa-vault"
+    },
+    {
+        title: "Portfolio Website",
+        tech: "[HTML | CSS | JS | Vercel]",
+        desc: "A personal portfolio showcasing my technical skills and progress in building real-world applications.",
+        link: "https://github.com/takshsharma-online/-personal-portfolio",
+        icon: "fa-code"
+    }
+    //Will add more projects here.
+];
+
+let currentProjectIndex = 0;
+const showcaseContainer = document.getElementById('project-showcase');
+
+function updateProjectShowcase() {
+    if (!showcaseContainer) return;
+
+    // Start fade out
+    showcaseContainer.classList.add('fade-out');
+
+    setTimeout(() => {
+        const project = myProjects[currentProjectIndex];
+
+        // Inject the new HTML
+        showcaseContainer.innerHTML = `
+            <div class="project-header">
+                <i class="fa-solid ${project.icon} project-icon"></i>
+                <div>
+                    <h3>${project.title}</h3>
+                    <span class="tech-tag">${project.tech}</span>
+                    <p>${project.desc}</p>
+                    <a href="${project.link}" target="_blank" style="text-decoration:none; color:var(--primary-blue); font-size:0.9rem;">View on GitHub</a>
+                </div>
+            </div>
+        `;
+
+        // Remove fade out / trigger fade in
+        showcaseContainer.classList.remove('fade-out');
+        showcaseContainer.classList.add('fade-in');
+
+        // Update index for next time
+        currentProjectIndex = (currentProjectIndex + 1) % myProjects.length;
+    }, 500); // 500ms matches the CSS transition time
+}
+
+// Start the cycle
+if (showcaseContainer) {
+    updateProjectShowcase(); // Run once immediately
+    setInterval(updateProjectShowcase, 5000); // Switch every 5 seconds
+}
