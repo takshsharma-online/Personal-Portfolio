@@ -148,3 +148,36 @@ footer {
     border-top: 1px solid var(--border-color);
     color: var(--secondary-text);
 }
+
+
+
+
+/* Update these specific sections in your style.css */
+
+.showcase-card {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center the text itself */
+    padding: 40px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Ensure the inner header also centers its contents */
+.showcase-card .project-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.showcase-card .project-icon {
+    font-size: 3rem; /* Make the icon a bit bigger since it's centered */
+    margin-bottom: 10px;
+}
+ h2{
+    text-align: center;
+}
