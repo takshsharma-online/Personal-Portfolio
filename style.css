@@ -299,3 +299,28 @@ footer {
         justify-content: center;
     }
 }
+/* --- Home Page (index.html) Mobile Layout --- */
+
+.hero {
+    padding: 50px 0; /* Reduces the overall vertical height of the hero */
+}
+
+.hero-content {
+    padding: 0 20px; /* Reduces side padding so the paragraph has room to breathe */
+    text-align: center; /* Centers the welcome text and button for a cleaner mobile look */
+}
+
+.hero h1 {
+    font-size: 2.2rem; /* Scales down the primary name heading */
+}
+
+.hero p {
+    font-size: 1rem; /* Scales down the bio text slightly for better mobile reading */
+    margin-bottom: 20px;
+}
+
+/* Project Showcase Mobile Layout */
+.showcase-card {
+    padding: 25px 15px; /* Significantly reduces the 40px padding to give the injected content more screen width */
+    min-height: auto; /* Allows the card to shrink if the content is small */
+}
