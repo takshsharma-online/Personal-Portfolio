@@ -65,7 +65,7 @@ if (canvas) {
 const myProjects = [
     {
         title: "Vesper's Ledger",
-        tech: "[Java | JavaFX | MySQL | System Design]",
+        tech: "[HTML | CSS | JavaScript | MySQL | PHP]",
         desc: "Full-stack event and task management system with CRUD operations and structured data handling.",
         link: "https://github.com/takshsharma-online",
         icon: "fa-vault"
